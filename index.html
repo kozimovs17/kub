@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section {
+            width: 600px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid red; */
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .cub {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 20s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .cub:hover {
+            transform: rotateX(300deg) rotateY(300deg);
+        }
+
+        .cub div {
+            font-size: 100px;
+            /* border: 2px solid blue; */
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background: radial-gradient(circle,  rgba(0, 255, 255, 0.349), rgba(37, 47, 53, 0.267));
+            /* transition: all 5s; */
+
+        }
+
+        .top {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+
+        .bottom {
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+
+        .right {
+            transform: rotateY(90deg) translateZ(200px);
+
+        }
+
+        .left {
+            transform: rotateY(-90deg) translateZ(200px);
+
+        }
+
+        .front {
+            transform: translateZ(200px);
+        }
+
+        .back {
+            transform: rotateX(180deg) translateZ(200px);
+        }
+        .cub p{
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid magenta; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.308) , rgba(255, 166, 0, 0.329));
+
+        }
+        .ltop{
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .lbotom{
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .lright{
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .lleft{
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .lfront{
+            transform: translateZ(100px);
+        }
+        .lback{
+            transform: rotateX(180deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="cub">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="front"></div>
+            <div class="back"></div>
+            <p class="ltop"></p>
+            <p class="lbotom"></p>
+            <p class="lright"></p>
+            <p class="lleft"></p>
+            <p class="lfront"></p>
+            <p class="lback"></p>
+        </div>
+    </div>
+</body>
+
+</html>
